@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll &amp; Calculate - 3D計算パズル</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div id="hud-left">
+      <div class="hud-item">レベル <span id="level-num">1</span></div>
+      <div class="hud-item">手数 <span id="move-count">0</span></div>
+    </div>
+    <div id="hud-center">
+      <div class="value-box">
+        <span class="value-label">現在の数</span>
+        <span id="current-value">0</span>
+      </div>
+      <div class="value-box target">
+        <span class="value-label">目標の数</span>
+        <span id="target-value">0</span>
+      </div>
+    </div>
+    <div id="hud-right">
+      <button id="restart-btn">リトライ</button>
+    </div>
+  </div>
+
+  <div id="message-overlay" class="hidden">
+    <div id="message-box">
+      <h2 id="message-title"></h2>
+      <p id="message-text"></p>
+      <button id="message-btn"></button>
+    </div>
+  </div>
+
+  <div id="canvas-container"></div>
+
+  <div id="controls">
+    <button id="btn-up" class="ctrl-btn" data-dir="north">↑</button>
+    <div class="ctrl-row">
+      <button id="btn-left" class="ctrl-btn" data-dir="west">←</button>
+      <button id="btn-down" class="ctrl-btn" data-dir="south">↓</button>
+      <button id="btn-right" class="ctrl-btn" data-dir="east">→</button>
+    </div>
+    <p class="hint">矢印キーまたはボタンで立方体を転がそう</p>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.min.js"
+      }
+    }
+  </script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
