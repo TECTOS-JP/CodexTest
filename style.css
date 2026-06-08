@@ -50,6 +50,7 @@ html, body {
   padding: 6px 14px;
   border-radius: 8px;
   font-size: 14px;
+  white-space: nowrap;
   backdrop-filter: blur(4px);
 }
 
@@ -98,6 +99,7 @@ html, body {
   padding: 10px 18px;
   font-size: 14px;
   font-weight: bold;
+  white-space: nowrap;
   cursor: pointer;
   transition: transform 0.1s ease, background 0.2s ease;
 }
@@ -199,4 +201,57 @@ html, body {
 
 #message-btn:hover {
   background: #3ab0d8;
+}
+
+@media (max-width: 480px) {
+  #hud {
+    padding: 10px 10px;
+  }
+
+  .hud-item {
+    padding: 5px 9px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  #hud-center {
+    gap: 8px;
+  }
+
+  .value-box {
+    padding: 5px 10px;
+    min-width: 72px;
+    border-radius: 8px;
+  }
+
+  .value-label {
+    font-size: 10px;
+  }
+
+  .value-box span#current-value,
+  .value-box span#target-value {
+    font-size: 19px;
+  }
+
+  #restart-btn {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+
+  .ctrl-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  .hint {
+    font-size: 11px;
+    max-width: 260px;
+  }
+
+  #message-box {
+    padding: 24px 26px;
+    max-width: 88vw;
+  }
 }
